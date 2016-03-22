@@ -1,0 +1,317 @@
+html {
+    height: 100%
+}
+
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(229, 227, 223);
+}
+
+#pageWrapper {
+    width: 100%;
+    height: 100%
+}
+
+
+/* Gmaps */
+
+#googleMap {
+    width: 100%;
+    height: 100%;
+}
+
+@media (max-width: 700px),
+handheld and (orientation: portrait) {
+    #googleMap {
+        width: 100%;
+        height: 75%;
+    }
+}
+
+
+/* logo on top*/
+
+@media (min-width: 700px), handheld and (orientation: landscape) {
+    .logoOnScreen {
+        display: none;
+        position: absolute;
+        transition: 1s;
+        top: 4em;
+        left: 2em;
+        background-color: white;
+        background-image: url('img/logoPeq_200x58.png');
+        height: 58px;
+        margin: 0;
+        min-width: 58px;
+        padding: 3px 10px;
+        background-origin: content-box;
+        background-repeat: no-repeat;
+        border-radius: 58px;
+        box-shadow: 0 0 2px red;
+    }
+    .logoOnScreen:hover {
+        background-color: white;
+        width: 200px;
+    }
+}
+
+
+/*  nav var */
+
+#nav {
+    display: inline-flex;
+    z-index: 10;
+    position: fixed;
+    width: 100%;
+    background-color: #5E9EF9;
+    padding: 0 1em;
+    font-family: sans-serif;
+    color: #F0F0F0;
+    box-shadow: 0 3px 2px rgba(0, 0, 0, 0.44);
+}
+
+#back {
+    background-image: url("img/back.png");
+    background-repeat: no-repeat;
+    margin: 0;
+    width: 6em;
+}
+
+#title {
+    font-weight: bold;
+    margin: auto;
+    /*center*/
+    margin: 1em auto;
+}
+
+#toggleBar {
+    width: 25%;
+    background-image: url("img/up.png");
+    background-repeat: no-repeat;
+    background-position: 50% 0;
+    margin: 0;
+    padding: 1em;
+}
+
+.rotate {
+    -ms-transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+
+@media (max-width: 700px),
+handheld and (orientation: portrait) {
+    #toggleBar {
+        display: none;
+    }
+}
+.flag{
+    height:1em;
+    margin-left: 1em;
+}
+
+/*  info var(right-bottom) */
+
+#mapInfo {
+    position: fixed;
+    top: 3em;
+    z-index: 5;
+    width: 25%;
+    height: 100%;
+    overflow: auto;
+    right: 0;
+    margin: 0;
+    /*    background-color: rgb(255, 255, 255);
+    background-color: rgba(255, 255, 255, 0.67);*/
+    background-color: rgb(212, 201, 191);
+    box-shadow: 0px 0px 3px 0px black;
+    padding: 5px 0 5px 20px;
+    transition: 0.2s linear;
+}
+
+@media (min-width: 700px),
+handheld and (orientation: landscape) {
+    .hide {
+        /*display: none;*/
+        width: 40px !important;
+        overflow: hidden !important;
+        background: none !important;
+        box-shadow: none !important;
+    }
+}
+
+
+/* if device is small / phone / tablet*/
+
+@media (max-width: 700px),
+handheld and (orientation: portrait) {
+    #mapInfo {
+        position: static;
+        width: auto;
+        height: auto;
+        background-color: white;
+        border-top-style: solid;
+        border-left-style: hidden;
+    }
+}
+
+.device {
+    overflow: hidden;
+    height: 60px;
+    border: 1px solid #1C1C1C;
+    border-right: none;
+    padding: 0;
+    margin: 0.5em 0 0 0;
+    background: red;
+    opacity: 0.6;
+    transition: 0.1s linear;
+}
+
+@media (min-width: 700px),
+handheld and (orientation: landscape) {
+    .device {
+        border-top-left-radius: 30px;
+        border-bottom-left-radius: 30px;
+    }
+}
+
+.device:hover {
+    opacity: 1;
+}
+
+
+/* selected device*/
+
+.highlight {
+    /* position: relative; */
+    font-weight: bolder;
+    opacity: 1;
+    margin-left: -18px;
+}
+
+.highlight > .noSelectable {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.logoWrapper {
+    width: 100%;
+    text-align: center;
+    margin: 2vw 0 2vw 0;
+}
+
+
+/*device colors*/
+
+.device1 {
+    background-color: #009AFF;
+}
+
+.device2 {
+    background-color: #FF6400;
+}
+
+.device3 {
+    background-color: #FF00FF;
+}
+
+.device4 {
+    background-color: #00FF00;
+}
+
+.device5 {
+    background-color: #FFEB00;
+}
+
+.device6 {
+    background-color: #00B066;
+}
+
+.device7 {
+    background-color: #FF0074;
+}
+
+.device8 {
+    background-color: #929E5C;
+}
+
+.device9 {
+    background-color: #0059FF;
+}
+
+.device10 {
+    background-color: #FF003A;
+}
+
+.device11 {
+    background-color: #A61AE4;
+}
+
+.device12 {
+    background-color: #6CFF00;
+}
+
+.device13 {
+    background-color: #2600FF;
+}
+
+.device14 {
+    background-color: #87C328;
+}
+
+.device15 {
+    background-color: #C254A4;
+}
+
+.device16 {
+    background-color: #00F4FF;
+}
+
+
+/* circle for the numbers */
+
+.circle {
+    position: absolute;
+    background: white;
+    display: inline-block;
+    border-radius: 108%;
+    font-family: arial, sans-serif;
+    padding: 0.1em;
+    height: 1em;
+    width: 1em;
+    border: 1px solid black;
+}
+
+.userPic {
+    position: absolute;
+}
+
+.userPic>img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+
+.device>p {
+    margin: 5px 0 1px 60px;
+}
+
+
+/* logo on menu -  is not the logo on map*/
+
+#logoWrapperMenu {
+    text-align: center;
+    padding-top: 2em;
+    padding-bottom: 65px;
+}
+
+@media (min-width: 700px),
+handheld and (orientation: landscape) {
+    .hide>#logoWrapperMenu>img {
+        width: 130px;
+    }
+}
